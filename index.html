@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Syed Communication - Premium laptops, computers, gaming accessories, keyboards, mice, and IT hardware in Saddar Mobile Market, Karachi." />
+  <meta name="keywords" content="Syed Communication, Saddar Mobile Market, Karachi, laptops, gaming accessories, keyboards, mouse, computers, IT hardware" />
+  <meta name="author" content="Syed Communication" />
+  <meta property="og:title" content="Syed Communication | Futuristic Tech Store" />
+  <meta property="og:description" content="Premium tech products at best prices from Syed Communication in Saddar Mobile Market, Karachi." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#050816" />
+  <title>Syed Communication | Premium Tech Store</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#050816;
+      --bg2:#0b1020;
+      --card:rgba(10, 16, 35, 0.62);
+      --card2:rgba(255,255,255,0.05);
+      --text:#f4f7ff;
+      --muted:#9aa7c7;
+      --blue:#00d4ff;
+      --purple:#8b5cf6;
+      --cyan:#22d3ee;
+      --line:rgba(255,255,255,0.08);
+      --shadow:0 20px 60px rgba(0,0,0,0.45);
+      --radius:24px;
+      --radius2:18px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:'Inter',sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(0,212,255,.14), transparent 28%),
+        radial-gradient(circle at top right, rgba(139,92,246,.16), transparent 24%),
+        radial-gradient(circle at bottom left, rgba(34,211,238,.08), transparent 22%),
+        linear-gradient(180deg, #040714 0%, #071020 50%, #050816 100%);
+      color:var(--text);
+      overflow-x:hidden;
+    }
+    body::before{
+      content:"";
+      position:fixed;
+      inset:0;
+      pointer-events:none;
+      background:
+        linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px);
+      background-size:48px 48px;
+      mask-image: radial-gradient(circle at center, black 30%, transparent 100%);
+      opacity:.25;
+      z-index:-1;
+    }
+    a{text-decoration:none;color:inherit}
+    .container{
+      width:min(1200px, calc(100% - 32px));
+      margin:0 auto;
+    }
+    .nav{
+      position:sticky;
+      top:0;
+      z-index:50;
+      backdrop-filter: blur(16px);
+      background:rgba(5,8,22,.6);
+      border-bottom:1px solid var(--line);
+    }
+    .nav-inner{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+      padding:14px 0;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:14px;
+      font-weight:800;
+      letter-spacing:.2px;
+    }
+    .brand img{
+      width:52px;height:52px;object-fit:contain;
+      border-radius:16px;
+      background:rgba(255,255,255,.05);
+      box-shadow:0 0 24px rgba(0,212,255,.18);
+      padding:6px;
+      border:1px solid rgba(255,255,255,.08);
+    }
+    .brand span{
+      display:block;
+      font-size:18px;
+      line-height:1.1;
+    }
+    .brand small{
+      display:block;
+      font-size:12px;
+      color:var(--muted);
+      font-weight:500;
+      margin-top:3px;
+    }
+    .nav-links{
+      display:flex;
+      gap:18px;
+      align-items:center;
+      flex-wrap:wrap;
+      color:var(--muted);
+      font-size:14px;
+    }
+    .nav-links a:hover{color:#fff}
+    .nav-cta{
+      display:flex;
+      gap:10px;
+      align-items:center;
+    }
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      padding:13px 18px;
+      border-radius:999px;
+      border:1px solid transparent;
+      font-weight:700;
+      transition:.25s ease;
+      cursor:pointer;
+      white-space:nowrap;
+    }
+    .btn-primary{
+      background:linear-gradient(135deg, var(--blue), var(--purple));
+      color:#fff;
+      box-shadow:0 0 24px rgba(0,212,255,.25);
+    }
+    .btn-primary:hover{transform:translateY(-2px) scale(1.01)}
+    .btn-secondary{
+      background:rgba(255,255,255,.04);
+      border-color:rgba(255,255,255,.1);
+      color:#fff;
+      backdrop-filter: blur(12px);
+    }
+    .btn-secondary:hover{
+      border-color:rgba(0,212,255,.45);
+      box-shadow:0 0 24px rgba(0,212,255,.14);
+      transform:translateY(-2px);
+    }
+    .hero{
+      position:relative;
+      padding:84px 0 34px;
+      overflow:hidden;
+    }
+    .hero-grid{
+      display:grid;
+      grid-template-columns:1.15fr .85fr;
+      gap:28px;
+      align-items:center;
+    }
+    .badge{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:10px 14px;
+      border-radius:999px;
+      background:rgba(255,255,255,.06);
+      border:1px solid rgba(255,255,255,.09);
+      color:#d9e4ff;
+      font-size:13px;
+      margin-bottom:18px;
+      backdrop-filter: blur(12px);
+    }
+    .hero h1{
+      font-size:clamp(40px, 5vw, 72px);
+      line-height:1.02;
+      margin:0 0 16px;
+      letter-spacing:-1.8px;
+    }
+    .hero h1 .glow{
+      background:linear-gradient(135deg, #fff, var(--cyan), var(--purple));
+      -webkit-background-clip:text;
+      background-clip:text;
+      color:transparent;
+      text-shadow:0 0 32px rgba(0,212,255,.12);
+    }
+    .hero p{
+      max-width:620px;
+      color:var(--muted);
+      font-size:18px;
+      line-height:1.7;
+      margin:0 0 26px;
+    }
+    .hero-actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      margin-bottom:26px;
+    }
+    .stats{
+      display:flex;
+      gap:18px;
+      flex-wrap:wrap;
+      margin-top:10px;
+    }
+    .stat{
+      min-width:150px;
+      padding:14px 16px;
+      border-radius:18px;
+      background:rgba(255,255,255,.04);
+      border:1px solid rgba(255,255,255,.08);
+      backdrop-filter: blur(14px);
+    }
+    .stat strong{display:block;font-size:22px}
+    .stat span{color:var(--muted);font-size:13px}
+    .hero-card{
+      position:relative;
+      min-height:520px;
+      border-radius:32px;
+      overflow:hidden;
+      background:
+        radial-gradient(circle at top, rgba(0,212,255,.18), transparent 30%),
+        radial-gradient(circle at bottom right, rgba(139,92,246,.18), transparent 35%),
+        rgba(255,255,255,.04);
+      border:1px solid rgba(255,255,255,.1);
+      box-shadow:var(--shadow);
+      backdrop-filter: blur(18px);
+    }
+    .hero-card::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:
+        linear-gradient(120deg, transparent 30%, rgba(255,255,255,.07), transparent 55%),
+        radial-gradient(circle at center, rgba(0,212,255,.14), transparent 52%);
+      animation:shine 7s linear infinite;
+    }
+    @keyframes shine{
+      0%{transform:translateX(-30%)}
+      100%{transform:translateX(30%)}
+    }
+    .hero-card img{
+      position:absolute;
+      inset:0;
+      margin:auto;
+      width:84%;
+      height:84%;
+      object-fit:contain;
+      filter:drop-shadow(0 0 28px rgba(0,212,255,.18));
+      transform:translateY(10px);
+      z-index:1;
+    }
+    .floating-chip{
+      position:absolute;
+      z-index:2;
+      padding:12px 14px;
+      border-radius:16px;
+      background:rgba(6,12,30,.72);
+      border:1px solid rgba(255,255,255,.12);
+      color:#fff;
+      backdrop-filter: blur(12px);
+      box-shadow:0 16px 40px rgba(0,0,0,.35);
+      animation: float 5s ease-in-out infinite;
+      font-size:13px;
+    }
+    .chip1{top:22px;left:22px}
+    .chip2{bottom:24px;right:22px;animation-delay:1.2s}
+    @keyframes float{
+      0%,100%{transform:translateY(0)}
+      50%{transform:translateY(-10px)}
+    }
+    section{padding:44px 0}
+    .section-head{
+      display:flex;
+      justify-content:space-between;
+      align-items:end;
+      gap:20px;
+      margin-bottom:20px;
+      flex-wrap:wrap;
+    }
+    .section-head h2{
+      font-size:clamp(28px, 3vw, 42px);
+      margin:0;
+      letter-spacing:-1px;
+    }
+    .section-head p{
+      margin:0;
+      color:var(--muted);
+      max-width:560px;
+      line-height:1.6;
+    }
+    .filters{
+      display:grid;
+      grid-template-columns:1.3fr .7fr .7fr .7fr;
+      gap:12px;
+      margin-bottom:22px;
+    }
+    .input, .select, textarea{
+      width:100%;
+      padding:14px 16px;
+      border-radius:16px;
+      outline:none;
+      border:1px solid rgba(255,255,255,.08);
+      background:rgba(255,255,255,.04);
+      color:#fff;
+      backdrop-filter: blur(12px);
+    }
+    .input::placeholder, textarea::placeholder{color:#8ea0c8}
+    .categories, .products, .why-grid{
+      display:grid;
+      gap:18px;
+    }
+    .categories{
+      grid-template-columns:repeat(5, 1fr);
+    }
+    .card{
+      background:var(--card);
+      border:1px solid rgba(255,255,255,.08);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      backdrop-filter: blur(18px);
+      overflow:hidden;
+      position:relative;
+    }
+    .category{
+      padding:22px 18px;
+      text-align:left;
+      transition:.25s ease;
+      min-height:150px;
+    }
+    .category:hover{transform:translateY(-4px); border-color:rgba(0,212,255,.28)}
+    .cat-emoji{
+      font-size:30px;
+      margin-bottom:12px;
+      display:inline-block;
+      filter:drop-shadow(0 0 10px rgba(0,212,255,.18));
+    }
+    .category h3{margin:0 0 8px;font-size:18px}
+    .category p{margin:0;color:var(--muted);font-size:13px;line-height:1.55}
+    .products{
+      grid-template-columns:repeat(3, 1fr);
+    }
+    .product{
+      overflow:hidden;
+    }
+    .product-img{
+      height:220px;
+      background:
+        radial-gradient(circle at top, rgba(0,212,255,.16), transparent 35%),
+        linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      border-bottom:1px solid rgba(255,255,255,.08);
+      position:relative;
+    }
+    .product-img img{
+      width:80%;
+      height:80%;
+      object-fit:contain;
+      filter:drop-shadow(0 0 22px rgba(0,212,255,.18));
+    }
+    .tag{
+      position:absolute;
+      top:14px;
+      left:14px;
+      padding:8px 12px;
+      border-radius:999px;
+      font-size:12px;
+      background:rgba(0,212,255,.14);
+      border:1px solid rgba(0,212,255,.22);
+      color:#dffcff;
+    }
+    .product-body{padding:18px}
+    .product-body h3{margin:0 0 8px;font-size:18px}
+    .price{font-size:24px;font-weight:800;margin:0 0 8px;color:#fff}
+    .specs{color:var(--muted);font-size:14px;line-height:1.6;min-height:66px}
+    .product-actions{display:flex;gap:10px;margin-top:16px;flex-wrap:wrap}
+    .small-btn{
+      padding:11px 14px;
+      font-size:13px;
+      border-radius:14px;
+    }
+    .about-wrap{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:18px;
+      align-items:stretch;
+    }
+    .about, .contact, .why, .map{
+      padding:24px;
+    }
+    .about p, .why p, .contact p{color:var(--muted);line-height:1.8}
+    .why-grid{
+      grid-template-columns:repeat(5, 1fr);
+    }
+    .why-item{
+      padding:18px;
+      text-align:center;
+    }
+    .why-item .icon{
+      width:56px;height:56px;border-radius:18px;margin:0 auto 12px;
+      display:grid;place-items:center;
+      background:linear-gradient(135deg, rgba(0,212,255,.18), rgba(139,92,246,.18));
+      border:1px solid rgba(255,255,255,.1);
+      box-shadow:0 0 20px rgba(0,212,255,.12);
+      font-size:22px;
+    }
+    .contact-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:18px;
+    }
+    .contact-list{
+      display:grid;
+      gap:12px;
+      margin:18px 0 0;
+    }
+    .contact-item{
+      display:flex;
+      gap:12px;
+      align-items:flex-start;
+      padding:14px 16px;
+      border-radius:16px;
+      background:rgba(255,255,255,.04);
+      border:1px solid rgba(255,255,255,.08);
+    }
+    .contact-item strong{display:block;margin-bottom:4px}
+    .contact-item span{color:var(--muted);font-size:14px;line-height:1.5}
+    .map iframe{
+      width:100%;
+      min-height:320px;
+      border:0;
+      border-radius:18px;
+      filter:saturate(1.1) contrast(1.05);
+    }
+    form{
+      display:grid;
+      gap:12px;
+      margin-top:16px;
+    }
+    footer{
+      padding:24px 0 40px;
+      color:var(--muted);
+      text-align:center;
+      border-top:1px solid var(--line);
+      margin-top:34px;
+    }
+    .backtop{
+      position:fixed;
+      right:18px;
+      bottom:18px;
+      z-index:60;
+      width:48px;height:48px;
+      border-radius:50%;
+      border:1px solid rgba(255,255,255,.12);
+      background:rgba(10,16,35,.72);
+      color:#fff;
+      display:grid;
+      place-items:center;
+      backdrop-filter: blur(16px);
+      box-shadow:var(--shadow);
+      cursor:pointer;
+      opacity:0;
+      transform:translateY(12px);
+      transition:.25s ease;
+    }
+    .backtop.show{opacity:1;transform:translateY(0)}
+    .fade-up{opacity:0;transform:translateY(18px);transition:all .7s ease}
+    .fade-up.show{opacity:1;transform:translateY(0)}
+    .muted{color:var(--muted)}
+    @media (max-width:1100px){
+      .categories,.why-grid{grid-template-columns:repeat(3,1fr)}
+      .products{grid-template-columns:repeat(2,1fr)}
+      .hero-grid,.about-wrap,.contact-grid{grid-template-columns:1fr}
+    }
+    @media (max-width:780px){
+      .nav-inner{flex-wrap:wrap}
+      .nav-links{display:none}
+      .filters{grid-template-columns:1fr 1fr}
+      .categories,.products,.why-grid{grid-template-columns:1fr}
+      .hero{padding-top:52px}
+      .hero-card{min-height:380px}
+      .filters .input:first-child{grid-column:1 / -1}
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="#home">
+        <img src="image.png" alt="Syed Communication Logo" />
+        <div>
+          <span>Syed Communication</span>
+          <small>Saddar Mobile Market, Karachi</small>
+        </div>
+      </a>
+      <div class="nav-links">
+        <a href="#categories">Categories</a>
+        <a href="#products">Products</a>
+        <a href="#about">About</a>
+        <a href="#why">Why Us</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="nav-cta">
+        <a class="btn btn-secondary" href="https://wa.me/9230028915924" target="_blank">WhatsApp</a>
+        <a class="btn btn-primary" href="#products">Shop Now</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero" id="home">
+    <div class="container hero-grid">
+      <div class="fade-up show">
+        <div class="badge">⚡ Premium Tech Store • Saddar Karachi • Trusted Local Supplier</div>
+        <h1>Powering Your Digital World – <span class="glow">Laptops, PCs & Accessories in Saddar</span></h1>
+        <p>Premium tech products at best prices from Syed Communication. Discover laptops, desktop computers, gaming gear, keyboards, mice, and IT hardware for gamers, students, office workers, freelancers, and local buyers.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#products">Shop Now</a>
+          <a class="btn btn-secondary" href="https://wa.me/9230028915924?text=Hello%20Syed%20Communication%2C%20I%20want%20to%20inquire%20about%20your%20products." target="_blank">Contact Us on WhatsApp</a>
+        </div>
+        <div class="stats">
+          <div class="stat"><strong>Best Prices</strong><span>Competitive market rates</span></div>
+          <div class="stat"><strong>Warranty</strong><span>Support on selected items</span></div>
+          <div class="stat"><strong>Fast Response</strong><span>Quick inquiry handling</span></div>
+        </div>
+      </div>
+      <div class="hero-card fade-up show">
+        <div class="floating-chip chip1">✨ Neon-powered experience</div>
+        <div class="floating-chip chip2">🚀 Fast replies on WhatsApp</div>
+        <img src="image.png" alt="Syed Communication futuristic logo" />
+      </div>
+    </div>
+  </header>
+
+  <section id="categories">
+    <div class="container">
+      <div class="section-head fade-up show">
+        <div>
+          <h2>Featured Categories</h2>
+          <p>Browse the most popular product groups for gaming, work, study, and daily IT needs.</p>
+        </div>
+      </div>
+      <div class="categories">
+        <div class="card category fade-up show"><div class="cat-emoji">💻</div><h3>Laptops</h3><p>Gaming & business laptops for all budgets and performance needs.</p></div>
+        <div class="card category fade-up show"><div class="cat-emoji">🖥</div><h3>Desktop Computers</h3><p>Powerful desktops for offices, home use, and high-performance setups.</p></div>
+        <div class="card category fade-up show"><div class="cat-emoji">⌨</div><h3>Keyboards</h3><p>Mechanical, wireless, and everyday keyboards for work and gaming.</p></div>
+        <div class="card category fade-up show"><div class="cat-emoji">🖱</div><h3>Gaming Mouse</h3><p>Precise, ergonomic mice with RGB glow and high DPI control.</p></div>
+        <div class="card category fade-up show"><div class="cat-emoji">🎧</div><h3>Accessories</h3><p>Cables, headsets, USB gadgets, laptop bags, and IT essentials.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="products">
+    <div class="container">
+      <div class="section-head fade-up show">
+        <div>
+          <h2>Featured Products</h2>
+          <p>Search, filter, and explore premium products with instant WhatsApp inquiry options.</p>
+        </div>
+      </div>
+
+      <div class="filters fade-up show">
+        <input class="input" id="search" type="text" placeholder="Search products..." />
+        <select class="select" id="categoryFilter">
+          <option value="">All Categories</option>
+          <option value="laptop">Laptop</option>
+          <option value="desktop">Desktop</option>
+          <option value="keyboard">Keyboard</option>
+          <option value="mouse">Mouse</option>
+          <option value="accessory">Accessory</option>
+        </select>
+        <select class="select" id="brandFilter">
+          <option value="">All Brands</option>
+          <option value="lenovo">Lenovo</option>
+          <option value="hp">HP</option>
+          <option value="dell">Dell</option>
+          <option value="logitech">Logitech</option>
+          <option value="razer">Razer</option>
+        </select>
+        <select class="select" id="priceFilter">
+          <option value="">All Prices</option>
+          <option value="low">Under Rs. 50,000</option>
+          <option value="mid">Rs. 50,000 - 150,000</option>
+          <option value="high">Above Rs. 150,000</option>
+        </select>
+      </div>
+
+      <div class="products" id="productGrid"></div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="container about-wrap">
+      <div class="card about fade-up show">
+        <div class="section-head" style="margin-bottom:12px;">
+          <div><h2>About Syed Communication</h2></div>
+        </div>
+        <p>Syed Communication is located in Saddar Mobile Market, Karachi, providing reliable and affordable computer hardware and accessories with trusted service.</p>
+        <p>We serve gamers, students, office workers, freelancers, and local IT buyers with quality products, honest pricing, and expert guidance to help you choose the right tech solution.</p>
+      </div>
+      <div class="card about fade-up show">
+        <div class="section-head" style="margin-bottom:12px;">
+          <div><h2>Admin-Friendly Product Upload</h2></div>
+        </div>
+        <p>This website is structured to support easy product updates, future catalog expansion, and fast-loading product showcase sections. You can later connect it with a simple admin panel or database.</p>
+        <p class="muted">Perfect for local retail stores wanting a premium online presence with inquiry-based sales.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="why">
+    <div class="container">
+      <div class="section-head fade-up show">
+        <div>
+          <h2>Why Choose Us</h2>
+          <p>We focus on trust, value, service, and the best shopping experience for local tech buyers.</p>
+        </div>
+      </div>
+      <div class="why-grid">
+        <div class="card why-item fade-up show"><div class="icon">💎</div><strong>Best Prices in Saddar</strong></div>
+        <div class="card why-item fade-up show"><div class="icon">✔</div><strong>Genuine Products Only</strong></div>
+        <div class="card why-item fade-up show"><div class="icon">🛡</div><strong>Warranty Support</strong></div>
+        <div class="card why-item fade-up show"><div class="icon">⚡</div><strong>Fast Customer Response</strong></div>
+        <div class="card why-item fade-up show"><div class="icon">🧠</div><strong>Expert IT Guidance</strong></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container contact-grid">
+      <div class="card contact fade-up show">
+        <div class="section-head" style="margin-bottom:12px;">
+          <div><h2>Contact Us</h2></div>
+        </div>
+        <p>Visit us at Saddar Mobile Market, Karachi, or send your inquiry directly on WhatsApp.</p>
+        <div class="contact-list">
+          <div class="contact-item">
+            <div>📍</div>
+            <div><strong>Location</strong><span>Saddar Mobile Market, Karachi</span></div>
+          </div>
+          <div class="contact-item">
+            <div>📞</div>
+            <div><strong>Phone</strong><span>03028915924</span></div>
+          </div>
+          <div class="contact-item">
+            <div>💬</div>
+            <div><strong>WhatsApp</strong><span><a href="https://wa.me/9230028915924" target="_blank">Click to chat now</a></span></div>
+          </div>
+          <div class="contact-item">
+            <div>✉</div>
+            <div><strong>Email</strong><span>syedcommunication@gmail.com</span></div>
+          </div>
+        </div>
+        <a class="btn btn-primary" style="margin-top:18px;" href="https://wa.me/9230028915924?text=Hello%20Syed%20Communication%2C%20I%20would%20like%20to%20place%20an%20order." target="_blank">Order on WhatsApp</a>
+      </div>
+
+      <div class="card map fade-up show">
+        <div class="section-head" style="margin-bottom:12px;">
+          <div><h2>Send an Inquiry</h2></div>
+        </div>
+        <form onsubmit="sendInquiry(event)">
+          <input class="input" id="name" type="text" placeholder="Your Name" required />
+          <input class="input" id="phone" type="tel" placeholder="Phone Number" required />
+          <textarea class="input" id="message" rows="5" placeholder="Write your inquiry..." required></textarea>
+          <button class="btn btn-primary" type="submit">Send via WhatsApp</button>
+        </form>
+        <div style="margin-top:18px;">
+          <iframe
+            src="https://www.google.com/maps?q=Saddar%20Mobile%20Market%20Karachi&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Saddar Mobile Market Map"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      © 2026 Syed Communication — Premium Computer & Electronics Retail in Saddar, Karachi.
+    </div>
+  </footer>
+
+  <button class="backtop" id="backTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+  <script>
+    const products = [
+      {name:"Lenovo IdeaPad 3", category:"laptop", brand:"lenovo", price:85000, specs:"Intel Core i5 • 8GB RAM • 512GB SSD • 15.6\" FHD", tag:"Best Seller", img:"https://via.placeholder.com/600x400/0b1020/00d4ff?text=Laptop"},
+      {name:"HP Pavilion Gaming", category:"laptop", brand:"hp", price:165000, specs:"Ryzen 5 • 16GB RAM • RTX Graphics • RGB Keyboard", tag:"Gaming", img:"https://via.placeholder.com/600x400/0b1020/8b5cf6?text=Gaming+Laptop"},
+      {name:"Dell OptiPlex Tower", category:"desktop", brand:"dell", price:125000, specs:"Intel Core i5 • 16GB RAM • 1TB SSD • Business Ready", tag:"Office", img:"https://via.placeholder.com/600x400/0b1020/22d3ee?text=Desktop"},
+      {name:"Logitech G Pro Keyboard", category:"keyboard", brand:"logitech", price:28000, specs:"Mechanical switches • RGB lighting • Durable build", tag:"New", img:"https://via.placeholder.com/600x400/0b1020/00d4ff?text=Keyboard"},
+      {name:"Razer Gaming Mouse", category:"mouse", brand:"razer", price:14500, specs:"High DPI • Ergonomic grip • RGB effects", tag:"Hot", img:"https://via.placeholder.com/600x400/0b1020/8b5cf6?text=Gaming+Mouse"},
+      {name:"Premium Laptop Bag", category:"accessory", brand:"hp", price:6500, specs:"Water resistant • Anti-shock padding • Light weight", tag:"Accessory", img:"https://via.placeholder.com/600x400/0b1020/22d3ee?text=Accessory"}
+    ];
+
+    const grid = document.getElementById('productGrid');
+    const search = document.getElementById('search');
+    const categoryFilter = document.getElementById('categoryFilter');
+    const brandFilter = document.getElementById('brandFilter');
+    const priceFilter = document.getElementById('priceFilter');
+    const backTop = document.getElementById('backTop');
+
+    function formatPrice(n){ return "Rs. " + n.toLocaleString(); }
+
+    function whatsappLink(productName){
+      const text = `Hello Syed Communication, I want to inquire about ${productName}.`;
+      return `https://wa.me/9230028915924?text=${encodeURIComponent(text)}`;
+    }
+
+    function renderProducts(){
+      const q = search.value.toLowerCase().trim();
+      const cat = categoryFilter.value;
+      const brand = brandFilter.value;
+      const price = priceFilter.value;
+
+      const filtered = products.filter(p => {
+        const matchQuery = p.name.toLowerCase().includes(q) || p.specs.toLowerCase().includes(q) || p.tag.toLowerCase().includes(q);
+        const matchCat = !cat || p.category === cat;
+        const matchBrand = !brand || p.brand === brand;
+        const matchPrice =
+          !price ||
+          (price === "low" && p.price < 50000) ||
+          (price === "mid" && p.price >= 50000 && p.price <= 150000) ||
+          (price === "high" && p.price > 150000);
+        return matchQuery && matchCat && matchBrand && matchPrice;
+      });
+
+      grid.innerHTML = filtered.map(p => `
+        <div class="card product fade-up show">
+          <div class="product-img">
+            <span class="tag">${p.tag}</span>
+            <img src="${p.img}" alt="${p.name}">
+          </div>
+          <div class="product-body">
+            <h3>${p.name}</h3>
+            <div class="price">${formatPrice(p.price)}</div>
+            <div class="specs">${p.specs}</div>
+            <div class="product-actions">
+              <a class="btn btn-primary small-btn" href="${whatsappLink(p.name)}" target="_blank">Buy Now</a>
+              <a class="btn btn-secondary small-btn" href="${whatsappLink(p.name)}" target="_blank">Inquire</a>
+            </div>
+          </div>
+        </div>
+      `).join('');
+
+      if (!filtered.length){
+        grid.innerHTML = `<div class="card about" style="grid-column:1/-1; text-align:center;">No products found. Try a different search or filter.</div>`;
+      }
+    }
+
+    [search, categoryFilter, brandFilter, priceFilter].forEach(el => el.addEventListener('input', renderProducts));
+    renderProducts();
+
+    function sendInquiry(e){
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const message = document.getElementById('message').value.trim();
+      const text = `Hello Syed Communication,%0AName: ${name}%0APhone: ${phone}%0AInquiry: ${message}`;
+      window.open(`https://wa.me/9230028915924?text=${text}`, "_blank");
+    }
+
+    window.addEventListener('scroll', () => {
+      backTop.classList.toggle('show', window.scrollY > 500);
+    });
+  </script>
+</body>
+</html>
